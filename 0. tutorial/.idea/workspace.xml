@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="54aa4a8b-ea31-4cf3-84b1-4bddeed2abe7" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="1rjMCkVjioiCtYnsXTUOOQzllSK" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\0.tutorial\template\admin\layouts" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\0. tutorial" />
+      <recent name="C:\xampp\htdocs\0. tutorial\pubic\admin\css" />
+      <recent name="C:\xampp\htdocs\0. tutorial\template\admin\layout" />
+      <recent name="C:\xampp\htdocs\0. tutorial\template\admin\categories" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="54aa4a8b-ea31-4cf3-84b1-4bddeed2abe7" name="Default Changelist" comment="" />
+      <created>1619484919880</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1619484919880</updated>
+      <workItem from="1619484921202" duration="3813000" />
+      <workItem from="1619488859320" duration="4060000" />
+      <workItem from="1619534522931" duration="12105000" />
+      <workItem from="1619583670478" duration="8323000" />
+      <workItem from="1619671216191" duration="1200000" />
+      <workItem from="1619842069131" duration="9111000" />
+      <workItem from="1619852824294" duration="1265000" />
+      <workItem from="1619855037847" duration="4253000" />
+      <workItem from="1619860662704" duration="7504000" />
+      <workItem from="1650863341555" duration="320000" />
+      <workItem from="1650863750408" duration="290000" />
+      <workItem from="1650864245617" duration="93000" />
+      <workItem from="1650865575815" duration="140000" />
+      <workItem from="1650865719973" duration="16000" />
+      <workItem from="1650894924415" duration="292000" />
+      <workItem from="1650895251824" duration="187000" />
+      <workItem from="1650899247786" duration="3685000" />
+      <workItem from="1651674021608" duration="3328000" />
+      <workItem from="1651735182347" duration="1895000" />
+      <workItem from="1651745379870" duration="2217000" />
+      <workItem from="1651816417005" duration="2466000" />
+      <workItem from="1652349242423" duration="17000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="CUSTOM_BOOLEAN_PROPERTIES">
+                <map>
+                  <entry key="Show.Git.Branches" value="false" />
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
