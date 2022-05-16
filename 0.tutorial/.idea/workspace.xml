@@ -1,7 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="54aa4a8b-ea31-4cf3-84b1-4bddeed2abe7" name="Default Changelist" comment="" />
+    <list default="true" id="54aa4a8b-ea31-4cf3-84b1-4bddeed2abe7" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.htaccess" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../0. tutorial/.idea/0. tutorial.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/0. tutorial.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../0. tutorial/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../0. tutorial/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../0. tutorial/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../0. tutorial/admin-dashboard/Admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin-dashboard/Admin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../0. tutorial/admin-dashboard/Category.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin-dashboard/Category.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../0. tutorial/admin-dashboard/CreateDB.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin-dashboard/CreateDB.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../0. tutorial/admin-dashboard/DataBase.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin-dashboard/DataBase.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../0. tutorial/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../0. tutorial/public/css/admin/bootstrap.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/admin/bootstrap.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../0. tutorial/public/css/admin/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/admin/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../0. tutorial/template/admin/categories/create.php" beforeDir="false" afterPath="$PROJECT_DIR$/template/admin/categories/create.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../0. tutorial/template/admin/categories/edit.php" beforeDir="false" afterPath="$PROJECT_DIR$/template/admin/categories/edit.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../0. tutorial/template/admin/categories/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/template/admin/categories/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../0. tutorial/template/admin/categories/show.php" beforeDir="false" afterPath="$PROJECT_DIR$/template/admin/categories/show.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../0. tutorial/template/admin/layouts/footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/template/admin/layouts/footer.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../0. tutorial/template/admin/layouts/head-tag.php" beforeDir="false" afterPath="$PROJECT_DIR$/template/admin/layouts/head-tag.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -68,6 +88,7 @@
       <workItem from="1651745379870" duration="2217000" />
       <workItem from="1651816417005" duration="2466000" />
       <workItem from="1652349242423" duration="17000" />
+      <workItem from="1652710705944" duration="2172000" />
     </task>
     <servers />
   </component>
