@@ -9,7 +9,7 @@ require_once(realpath(dirname(__FILE__) . "/../layouts/head-tag.php"));
             </section>
             <section class="row my-3">
                 <section class="col-12">
-                    <form method="post" action="http://localhost/admin-panel/category/store">
+                    <form method="post" action="http://localhost/PHPTuto/0.tutorial/category/store">
                         <div class="form-group">
                             <label for="name">Title</label>
                             <input type="text" class="form-control" id="name" name="name" placeholder="Enter name ...">
