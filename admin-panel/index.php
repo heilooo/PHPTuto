@@ -18,7 +18,7 @@ function uri($uri,$class,$method,$requestMethod='GET'){
   $subURIs=explode('/',$uri);
   $request_uri=array_slice(explode('/',$_SERVER['REQUEST_URI']),2);
   if ($request_uri[0] == "" or $request_uri[0] == "/")
-      $request_uri[0] == "home";
+      $request_uri[0] = "home";
 
   $braek=false;
   if (sizeof($request_uri)== sizeof($subURIs) and $_SERVER['REQUEST_METHOD'] == $requestMethod){
