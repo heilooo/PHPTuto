@@ -23,7 +23,7 @@ class Category extends Admin
     public function show($id)
     {
         $db = new DataBase();
-        $category = $db->select("SELECT * FROM `categories` WHERE `id`=?", [$id])->fetch(\PDO::FETCH_OBJ);
+        $category = $db->select("SELECT * FROM `categories` WHERE `id`=?", [$id])->fetch();
         require_once realpath(dirname(__FILE__).'/../template/admin/categories/show.php');
     }
 
@@ -45,8 +45,8 @@ class Category extends Admin
     public function edit($id)
     {
         $db = new DataBase();
-        $category = $db->select("SELECT * FROM `categories` WHERE `id`=?", [$id])->fetch(\PDO::FETCH_OBJ);
-        require_once realpath(dirname(__FILE__).'../template/admin/categories/edit.php');
+        $category = $db->select("SELECT * FROM `categories` WHERE `id`=?", [$id])->fetch();
+        require_once realpath(dirname(__FILE__).'/../template/admin/categories/edit.php');
     }
 
 //ادیت رکورد
@@ -62,6 +62,6 @@ class Category extends Admin
     {
         $db = new DataBase();
         $db->delete('categories',$id);
-        $this->redirectBack();
+        $this->redirect('category');
     }
 }
