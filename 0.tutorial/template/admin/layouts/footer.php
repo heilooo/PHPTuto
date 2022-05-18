@@ -22,9 +22,9 @@
 <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>-->
 <!--<script src="dashboard.js"></script>-->
 
-<script src="http://localhost/admin-panel/public/js/admin/bootstrap.min.js"></script>
+<script src="http://localhost/PHPTuto/0.tutorial/public/js/admin/bootstrap.min.js"></script>
 <!-- MDB core JavaScript -->
-<script src="http://localhost/admin-panel/public/js/admin/mdb.min.js"></script>
+<script src="http://localhost/PHPTuto/0.tutorial/public/js/admin/mdb.min.js"></script>
 </body>
 </html>
 
