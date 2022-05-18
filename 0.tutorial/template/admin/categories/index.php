@@ -18,10 +18,12 @@ require_once(realpath(dirname(__FILE__) . "/../layouts/head-tag.php"));
                 </tr>
             </thead>
             <tbody>
-<?php foreach ($categories as $category) { ?>
+<?php
+$id=1;
+foreach ($categories as $category) { ?>
             <tr>
-                <td><?php echo $category["id"] ?></td>
-                <td><?php echo $category["name"] ?></td>
+                <td><?php echo $id ?></td>
+                <td><a href="category/show/<?php echo $category["id"] ?>"><?php echo $category["name"] ?></a></td>
                 <td>
                     <a role="button" href="http://localhost/PHPTuto/0.tutorial/category/edit/<?php echo $category['id'];
                     ?>" class="btn btn-sm btn-info my-0
@@ -31,7 +33,7 @@ require_once(realpath(dirname(__FILE__) . "/../layouts/head-tag.php"));
     btn-danger my-0 mx-1 text-white">delete</a>
                 </td>
             </tr>
-    <?php } ?>
+    <?php $id++; } ?>
 
             </tbody>
         </table>

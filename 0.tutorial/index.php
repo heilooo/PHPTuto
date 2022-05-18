@@ -1,6 +1,8 @@
 <?php
 require_once realpath(dirname(__FILE__).'/admin-dashboard/Category.php');
 use AdminDashboard\Category;
+require_once realpath(dirname(__FILE__).'/admin-dashboard/Article.php');
+use AdminDashboard\Article;
 
 //require_once 'admin-dashboard/CreateDB.php';
 //use DataBase\CreateDB;
@@ -61,7 +63,7 @@ function uri($uri,$class,$method,$requestMethod='GET'){
     }
 
 }
-
+//Category
 uri('category','Category','index');
 uri('category/show/{id}','Category','show');
 uri('category/create','Category','create');
@@ -69,3 +71,11 @@ uri('category/store','Category','store','POST');
 uri('category/edit/{id}','Category','edit');
 uri('category/update/{id}','Category','update','POST');
 uri('category/delete/{id}','Category','delete');
+//Article
+uri('article','Article','index');
+uri('article/show/{id}','Article','show');
+uri('article/create','Article','create');
+uri('article/store','Article','store','POST');
+uri('article/edit/{id}','Article','edit');
+uri('article/update/{id}','Article','update','POST');
+uri('article/delete/{id}','Article','delete');

@@ -2,12 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="54aa4a8b-ea31-4cf3-84b1-4bddeed2abe7" name="Default Changelist" comment="">
+<<<<<<< HEAD
+      <change afterPath="$PROJECT_DIR$/admin-dashboard/Article.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin-dashboard/Category.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin-dashboard/Category.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/admin/categories/edit.php" beforeDir="false" afterPath="$PROJECT_DIR$/template/admin/categories/edit.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/admin/categories/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/template/admin/categories/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/admin/categories/show.php" beforeDir="false" afterPath="$PROJECT_DIR$/template/admin/categories/show.php" afterDir="false" />
+=======
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admin-dashboard/Category.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin-dashboard/Category.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/template/admin/categories/create.php" beforeDir="false" afterPath="$PROJECT_DIR$/template/admin/categories/create.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/template/admin/categories/edit.php" beforeDir="false" afterPath="$PROJECT_DIR$/template/admin/categories/edit.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/template/admin/categories/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/template/admin/categories/index.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/template/admin/layouts/head-tag.php" beforeDir="false" afterPath="$PROJECT_DIR$/template/admin/layouts/head-tag.php" afterDir="false" />
+>>>>>>> main
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,7 +40,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../admin-panel" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -75,8 +84,15 @@
       <workItem from="1651745379870" duration="2217000" />
       <workItem from="1651816417005" duration="2466000" />
       <workItem from="1652349242423" duration="17000" />
+<<<<<<< HEAD
+      <workItem from="1652710705944" duration="2220000" />
+      <workItem from="1652718477919" duration="943000" />
+      <workItem from="1652730511576" duration="8000" />
+      <workItem from="1652798365527" duration="3767000" />
+=======
       <workItem from="1652710705944" duration="2172000" />
       <workItem from="1652871154239" duration="710000" />
+>>>>>>> main
     </task>
     <servers />
   </component>
