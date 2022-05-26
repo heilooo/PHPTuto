@@ -15,26 +15,32 @@ class Admin
         header("location :" . $_SERVER['HTTP_REFERER']);
     }
 
-    protected function saveImage($image, $imagePath, $imageName = NULL)
+    protected function saveImages($image, $imagePath, $imageName = NULL)
     {
-        if ($imageName)
+//        گرفتن تایپ فایل
+        if ($imageName) {
             $imageName = $imageName . '.' . substr($image['type'], 6, strlen($image['type']));
-        else
-            $imageName = date("Y-m-d-H-i-s") . '.' . substr($image['type'], 6, strlen($image['type']));
+        } else {
+            $imageName = date('Y-m-d-H-i-s') . '.' . substr($image['type'], 6, strlen($image['type']));
+        }
         $imageTemp = $image['tmp_name'];
-        $imagePath = "public/" . $imagePath . '/';
+        $imagePath = 'public/' . $imagePath . '/';
+//        انتقال از موقت به دائم
         if (is_uploaded_file($imageTemp)) {
-            if (move_uploaded_file($imageTemp, $imagePath . $imageName))
+            if (move_uploaded_file($imageTemp, $imagePath . $imageName)) {
                 return $imagePath . $imageName;
-            else
+            } else {
                 return false;
-        } else
+            }
+        } else {
             return false;
+        }
     }
 
     protected function removeImage($path)
     {
-        $path = $_SERVER['DOCUMENT_ROOT'] . '/PHPTuto/0.tutorial/' . $path;
+        $path = $_SERVER['DOCUMENT_ROOT'] . "/PHPTuto/0.tutorial/" . $path;
         unlink($path);
     }
+
 }
