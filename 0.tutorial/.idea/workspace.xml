@@ -2,14 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="54aa4a8b-ea31-4cf3-84b1-4bddeed2abe7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/admin-dashboard/Menu.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin-dashboard/Admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin-dashboard/Admin.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin-dashboard/Article.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin-dashboard/Article.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin-dashboard/menu.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin-dashboard/Menu.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/template/admin/articles/create.php" beforeDir="false" afterPath="$PROJECT_DIR$/template/admin/articles/create.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/template/admin/articles/edit.php" beforeDir="false" afterPath="$PROJECT_DIR$/template/admin/articles/edit.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/template/admin/articles/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/template/admin/articles/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/admin/categories/create.php" beforeDir="false" afterPath="$PROJECT_DIR$/template/admin/categories/create.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -105,5 +101,26 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/admin-dashboard/Menu.php</url>
+          <line>42</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/admin-dashboard/Menu.php</url>
+          <line>43</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/admin-dashboard/Menu.php</url>
+          <line>35</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
