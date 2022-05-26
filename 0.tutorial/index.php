@@ -8,6 +8,9 @@ use AdminDashboard\Article;
 require_once realpath(dirname(__FILE__).'/admin-dashboard/Menu.php');
 use AdminDashboard\Menu;
 
+require_once realpath(dirname(__FILE__).'/admin-dashboard/WebSetting.php');
+use AdminDashboard\WebSetting;
+
 //require_once 'admin-dashboard/CreateDB.php';
 //use DataBase\CreateDB;
 //$db=new CreateDB();
@@ -92,3 +95,7 @@ uri('menu/store','Menu','store','POST');
 uri('menu/edit/{id}','Menu','edit');
 uri('menu/update/{id}','Menu','update','POST');
 uri('menu/delete/{id}','Menu','delete');
+//WebSetting
+uri('webSetting','WebSetting','index');
+uri('webSetting/set','WebSetting','set');
+uri('webSetting/store','WebSetting','store','POST');
