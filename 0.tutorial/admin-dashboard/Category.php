@@ -2,11 +2,9 @@
 
 namespace AdminDashboard;
 require_once realpath(dirname(__FILE__).'/Database.php');
-
 use DataBase\DataBase;
 
 require_once realpath(dirname(__FILE__).'/Admin.php');
-
 use AdminDashboard\Admin;
 
 class Category extends Admin
