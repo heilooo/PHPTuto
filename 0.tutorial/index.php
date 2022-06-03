@@ -11,6 +11,9 @@ use AdminDashboard\Menu;
 require_once realpath(dirname(__FILE__).'/admin-dashboard/WebSetting.php');
 use AdminDashboard\WebSetting;
 
+require_once realpath(dirname(__FILE__).'/admin-dashboard/User.php');
+use AdminDashboard\User;
+
 //require_once 'admin-dashboard/CreateDB.php';
 //use DataBase\CreateDB;
 //$db=new CreateDB();
@@ -95,6 +98,13 @@ uri('menu/store','Menu','store','POST');
 uri('menu/edit/{id}','Menu','edit');
 uri('menu/update/{id}','Menu','update','POST');
 uri('menu/delete/{id}','Menu','delete');
+//users
+uri('user','User','index');
+uri('user/permission/{id}','User','permission');
+uri('user/store','User','store','POST');
+uri('user/edit/{id}','User','edit');
+uri('user/update/{id}','User','update','POST');
+uri('user/delete/{id}','User','delete');
 //WebSetting
 uri('webSetting','WebSetting','index');
 uri('webSetting/set','WebSetting','set');

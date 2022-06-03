@@ -12,7 +12,7 @@ class Admin
 
     protected function redirectBack()
     {
-        header("location :" . $_SERVER['HTTP_REFERER']);
+        header("location: " . $_SERVER['HTTP_REFERER']);
     }
 
     protected function saveImages($image, $imagePath, $imageName = NULL)

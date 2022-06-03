@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="54aa4a8b-ea31-4cf3-84b1-4bddeed2abe7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/admin-dashboard/WebSetting.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin-dashboard/Category.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin-dashboard/Category.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,8 +25,10 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../web" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.editor" />
     <property name="vue.rearranger.settings.migration" value="true" />
@@ -80,7 +79,8 @@
       <workItem from="1652730511576" duration="8000" />
       <workItem from="1652798365527" duration="7074000" />
       <workItem from="1653484191342" duration="1133000" />
-      <workItem from="1653573383034" duration="3274000" />
+      <workItem from="1653573383034" duration="3653000" />
+      <workItem from="1653631502695" duration="424000" />
     </task>
     <servers />
   </component>

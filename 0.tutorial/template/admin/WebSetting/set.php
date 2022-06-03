@@ -9,7 +9,7 @@ require_once(realpath(dirname(__FILE__) . "/../layouts/head-tag.php"));
 <section class="row my-3">
     <section class="col-12">
 
-        <form method="post" action="http://localhost/admin-panel/web-setting/store" enctype="multipart/form-data">
+        <form method="post" action="http://localhost/PHPTuto/0.tutorial/webSetting/store" enctype="multipart/form-data">
             <div class="form-group">
                 <label for="title">Title</label>
                 <input type="text" class="form-control" id="title" name="title" placeholder="Enter title ..." value="<?php if($setting !=null) echo $setting['title']; ?>" autofocus>
@@ -28,7 +28,7 @@ require_once(realpath(dirname(__FILE__) . "/../layouts/head-tag.php"));
 
            <div class="form-group">
            <?php if($setting !=null){ ?>
-                    <img style="width: 100px;" src="<?php echo 'http://'.$_SERVER['HTTP_HOST'].'/admin-panel/'.$setting['logo']; ?>" alt="" >
+                    <img style="width: 100px;" src="<?php echo 'http://'.$_SERVER['HTTP_HOST'].'/PHPTuto/0.tutorial/'.$setting['logo']; ?>" alt="" >
                 <hr/>
                 <?php } ?>
                 <label for="logo">Logo</label>
@@ -37,7 +37,7 @@ require_once(realpath(dirname(__FILE__) . "/../layouts/head-tag.php"));
 
             <div class="form-group">
             <?php if($setting !=null){ ?>
-                    <img style="width: 100px;" src="<?php echo 'http://'.$_SERVER['HTTP_HOST'].'/admin-panel/'.$setting['icon']; ?>" alt="" >
+                    <img style="width: 100px;" src="<?php echo 'http://'.$_SERVER['HTTP_HOST'].'/PHPTuto/0.tutorial/'.$setting['icon']; ?>" alt="" >
                 <hr/>
                 <?php } ?>
                 <label for="icon">Icon</label>
