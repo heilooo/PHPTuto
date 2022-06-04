@@ -81,7 +81,7 @@ class CreateDB extends DataBase
         ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci;
         ",
     );
-    private $tableInitializes = array(['table'=>'users','fields'=>['username', 'email', 'password', 'permission'],'values'=>['abbas','am.dadvand@gmail.com','aa11121','admin']],);
+    private $tableInitializes = array(['table'=>'users','fields'=>['username', 'email', 'password', 'permission'],'values'=>['abbas','am.dadvand@gmail.com','$2y$10$PAzCSCeFdhL87JVbSxLsnOPl4qYw45SUwz.ScvMj62xPtblqtccbC','admin']],);
 
     public function run()
     {

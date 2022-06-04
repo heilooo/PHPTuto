@@ -40,9 +40,9 @@ class WebSetting extends Admin
         }
 
         if ($setting!=''){
-            $db->update('Websetting',$request['id'],array_keys($request),$request);
+            $db->update('websetting',$setting['id'],array_keys($request),$request);
         }else{
-            $db->insert('Websetting',array_keys($request),$request);
+            $db->insert('websetting',array_keys($request),$request);
         }
         $this->redirect('webSetting');
 

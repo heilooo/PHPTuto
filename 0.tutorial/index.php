@@ -11,6 +11,15 @@ use AdminDashboard\Menu;
 require_once realpath(dirname(__FILE__).'/admin-dashboard/WebSetting.php');
 use AdminDashboard\WebSetting;
 
+require_once realpath(dirname(__FILE__).'/admin-dashboard/User.php');
+use AdminDashboard\User;
+
+require_once realpath(dirname(__FILE__).'/admin-dashboard/Auth.php');
+use AdminDashboard\Auth;
+
+require_once realpath(dirname(__FILE__).'/admin-dashboard/Home.php');
+use AdminDashboard\Home;
+
 //require_once 'admin-dashboard/CreateDB.php';
 //use DataBase\CreateDB;
 //$db=new CreateDB();
@@ -95,7 +104,25 @@ uri('menu/store','Menu','store','POST');
 uri('menu/edit/{id}','Menu','edit');
 uri('menu/update/{id}','Menu','update','POST');
 uri('menu/delete/{id}','Menu','delete');
+//users
+uri('user','User','index');
+uri('user/permission/{id}','User','permission');
+uri('user/store','User','store','POST');
+uri('user/edit/{id}','User','edit');
+uri('user/update/{id}','User','update','POST');
+uri('user/delete/{id}','User','delete');
 //WebSetting
 uri('webSetting','WebSetting','index');
 uri('webSetting/set','WebSetting','set');
 uri('webSetting/store','WebSetting','store','POST');
+//auth
+uri('login','Auth','login');
+uri('check-login','Auth','checkLogin','POST');
+uri('register','Auth','register');
+uri('register/store','Auth','registerStore','POST');
+uri('logout','Auth','logout');
+//Home
+uri('home','Home','index');
+uri('show-article/{id}','Home','show');
+uri('show-category/{id}','Home','category');
+uri('comment-store','Home','commentStore','POST');
