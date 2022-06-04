@@ -8,6 +8,13 @@ use DataBase\DataBase;
 
 class Auth
 {
+    public function __construct()
+    {
+        if (session_status() == PHP_SESSION_NONE) {
+            session_start();
+        }
+    }
+
     public function login()
     {
         require_once realpath(dirname(__FILE__) . '/../template/auth/login.php');
@@ -17,17 +24,15 @@ class Auth
     {
         if (empty($request['email']) || empty($request['password'])) {
             $this->redirectBack();
-        } elseif (strlen($request['password']) < 8) {
-            $this->redirectBack();
-        } elseif (!filter_var($request['email'], FILTER_VALIDATE_EMAIL)) {
-            $this->redirectBack();
         } else {
             $db = new DataBase();
-            $user = $db->select("SELECT * FROM `users` WHERE `email`=?", [$request['email']])->fetch();
+            $user = $db->select("SELECT * FROM `users` WHERE (`email` = ?); ", [$request['email']])->fetch();
             if ($user != null) {
                 if (password_verify($request['password'], $user['password'])) {
                     $_SESSION['user'] = $user['id'];
                     $this->redirect('admin');
+                } else {
+                    $this->redirectBack();
                 }
             } else {
                 $this->redirectBack();
@@ -50,9 +55,14 @@ class Auth
             $this->redirectBack();
         } else {
             $db = new DataBase();
-            $request['password'] = $this->hash($request['password']);
-            $db->insert('users', array_keys($request), $request);
-            $this->redirect('login');
+            $user = $db->select("SELECT * FROM `users` WHERE (`email` = ?); ", [$request['email']])->fetch();
+            if ($user != null) {
+                $this->redirectBack();
+            } else {
+                $request['password'] = $this->hash($request['password']);
+                $db->insert('users', array_keys($request), $request);
+                $this->redirect('login');
+            }
         }
     }
 
@@ -67,12 +77,18 @@ class Auth
 
     public function checkAdmin()
     {
-        if (isset($_SESSION['user'])){
-            $db=new DataBase();
-            $user=$db->select("SELECT * FROM `users` WHERE `id`=?;",[$_SESSION['user']])->fetch();
-            if ($user!=null){
-                if ($user['permission']!='admin')
+        if (isset($_SESSION['user'])) {
+            $db = new DataBase();
+            $user = $db->select("SELECT * FROM `users` WHERE `id`=?;", [$_SESSION['user']])->fetch();
+            if ($user != null) {
+                if ($user['permission'] != 'admin') {
+                    $this->redirect('home');
+                }
+            } else {
+                $this->redirect('home');
             }
+        } else {
+            $this->redirect('home');
         }
     }
 
@@ -85,6 +101,12 @@ class Auth
     protected function redirectBack()
     {
         header("location: " . $_SERVER['HTTP_REFERER']);
+    }
+
+    public function hash($string)
+    {
+        return $hashString = password_hash($string, PASSWORD_DEFAULT);
+
     }
 
 }
