@@ -11,9 +11,9 @@ class DataBase
 
 
     private $dbHost= "localhost";
-    private $dbName= "test";
+    private $dbName= "blog";
     private $dbUsername="root";
-    private $dbPassword = "";
+    private $dbPassword = "mysql";
 
     function __construct()
     {
@@ -22,34 +22,11 @@ class DataBase
                 $this->dbPassword,$this->option);
         }
         catch (PDOException $e){
-            echo "<div style='color:red'> There is some problem in connection :</div>". $e->getMessage();
-        }
-
-    }
-
-    public function createTable($sql)
-    {
-        try{
-            $this->connection->exec($sql);
-            return true;
-        }
-        catch (PDOException $e){
-            echo "<div style='color:red;'> There is some problem in connection :</div>". $e->getMessage();
-            return false;
-        }
-    }
-    public function insert($tableName,$fields,$values)
-    {
-        try{
-            $stmt= $this->connection->prepare("INSERT INTO ".$tableName."(".implode(', ',$fields)." , created_at) VALUES ( :" . implode(', :',$fields) . " , now() );");
-            $stmt->execute(array_combine($fields,$values));
-            return true;
-        }
-        catch (PDOException $e){
             echo "<div> style='color:red;'> There is some problem in connection :</div>". $e->getMessage();
-            return false;
         }
+
     }
+
     public function select($sql, $values=NULL)
     {
         try{
@@ -64,10 +41,24 @@ class DataBase
             }
         }
         catch (PDOException $e){
-            echo "<div style='color:red;'> There is some problem in connection :</div>". $e->getMessage();
+            echo "<div> style='color:red;'> There is some problem in connection :</div>". $e->getMessage();
             return false;
         }
     }
+
+    public function insert($tableName,$fields,$values)
+    {
+        try{
+            $stmt= $this->connection->prepare("INSERT INTO ".$tableName."(".implode(', ',$fields)." , created_at) VALUES ( :" . implode(', :',$fields) . " , now() );");
+            $stmt->execute(array_combine($fields,$values));
+            return true;
+        }
+        catch (PDOException $e){
+            echo "<div> style='color:red;'> There is some problem in connection :</div>". $e->getMessage();
+            return false;
+        }
+    }
+
     public function update($tableName,$id,$fields,$values)
     {
         $sql = "UPDATE `" . $tableName . "` SET";
@@ -87,10 +78,11 @@ class DataBase
             }
             return true;
         } catch (PDOException $e) {
-            echo "<div style='color:red;'> There is some problem in connection :</div>" . $e->getMessage();
+            echo "<div> style='color:red;'> There is some problem in connection :</div>" . $e->getMessage();
             return false;
         }
     }
+
     public function delete($tableName,$id)
     {
         $sql="DELETE FROM ".$tableName." WHERE `id` = ? ;";
@@ -103,8 +95,35 @@ class DataBase
             return true;
         }
         catch (PDOException $e) {
-            echo "<div style='color:red;'> There is some problem in connection :</div>" . $e->getMessage();
+            echo "<div> style='color:red;'> There is some problem in connection :</div>" . $e->getMessage();
             return false;
         }
     }
+
+
+    public function createTable($sql)
+    {
+        try{
+            $this->connection->exec($sql);
+
+            return true;
+        }
+        catch (PDOException $e){
+            echo "<div> style='color:red;'> There is some problem in connection :</div>". $e->getMessage();
+            return false;
+        }
+
+
+    }
+
 }
+
+
+
+
+
+
+
+
+
+

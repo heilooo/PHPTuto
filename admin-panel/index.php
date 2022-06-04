@@ -2,9 +2,11 @@
 require_once ("admin-dashboard/Category.class.php");
 require_once ("admin-dashboard/Article.class.php");
 require_once ("admin-dashboard/WebSetting.class.php");
+require_once ("admin-dashboard/User.class.php");
 require_once ("admin-dashboard/CreateDB.php");
 require_once ("admin-dashboard/Menu.class.php");
 use AdminDashboard\Category;
+use AdminDashboard\User;
 use AdminDashboard\WebSetting;
 use AdminDashboard\Article;
 use AdminDashboard\Menu;
@@ -18,7 +20,7 @@ function uri($uri,$class,$method,$requestMethod='GET'){
   $subURIs=explode('/',$uri);
   $request_uri=array_slice(explode('/',$_SERVER['REQUEST_URI']),2);
   if ($request_uri[0] == "" or $request_uri[0] == "/")
-      $request_uri[0] = "home";
+      $request_uri[0] == "home";
 
   $braek=false;
   if (sizeof($request_uri)== sizeof($subURIs) and $_SERVER['REQUEST_METHOD'] == $requestMethod){
@@ -70,6 +72,33 @@ else{
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 //category
 uri('category','Category','index');
 uri('category/show/{id}','Category','show');
@@ -98,7 +127,30 @@ uri('menu/edit/{id}','Menu','edit');
 uri('menu/update/{id}','Menu','update','POST');
 uri('menu/delete/{id}','Menu','delete');
 
+
+//users
+uri('user','User','index');
+uri('user/permission/{id}','User','permission');
+uri('user/edit/{id}','User','edit');
+uri('user/update/{id}','User','update','POST');
+uri('user/delete/{id}','User','delete');
+
 //web setting
 uri('web-setting','WebSetting','index');
 uri('web-setting/set','WebSetting','set');
 uri('web-setting/store','WebSetting','store','POST');
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

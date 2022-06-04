@@ -3,8 +3,8 @@ namespace AdminDashboard;
 
 class Admin{
     protected function redirect($url){
-        $protocol= stripos($_SERVER['SERVER_PROTOCOL'],'https')=== true ? 'https://' : 'http://';
-        header("Location: ".$protocol.$_SERVER['HTTP_HOST']."/admin-panel/".$url);
+        $prtocol= stripos($_SERVER['SERVER_PROTOCOL'],'https')=== true ? 'https://' : 'http://';
+        header("Location: ".$prtocol.$_SERVER['HTTP_HOST']."/admin-panel/".$url);
     }
 
 
