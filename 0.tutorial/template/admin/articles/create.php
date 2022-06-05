@@ -24,7 +24,6 @@ require_once(realpath(dirname(__FILE__) . "/../layouts/head-tag.php"));
                         <?php foreach ($categories as $category) { ?>
                             <option value="<?php echo $category['id'] ?>"><?php echo $category['name']; ?></option>
                         <?php } ?>
-
                     </select>
                 </div>
 
