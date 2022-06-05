@@ -23,7 +23,7 @@ class Home
         $submenus = $db->select('SELECT * FROM `menus` WHERE `parent_id` IS NOT NULL ;')->fetchAll();
 
         $setting=$db->select("SELECT * FROM `websetting`")->fetch();
-        
+
         require_once (realpath(dirname(__FILE__) . "/../template/app/index.php"));
     }
 
