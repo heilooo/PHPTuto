@@ -58,15 +58,17 @@ class Article extends Admin
     {
         $db = new DataBase();
         if ($request['cat_id'] != null) {
-            $request['image'] = $this->saveImages($request['image'], 'article_image');
-            if ($request['image']) {
-                $request = array_merge($request, array('user_id' => 1));
+
+//            $request['image'] = $this->saveImages($request['image'], 'article_image');
+            if ($request['image']['tmp_name']!=null) {
+
+                $request = array_merge($request, array('user_id' => $_SESSION['user']));
                 $db->insert('articles', array_keys($request), $request);
                 $this->redirect('article');
             } else {
                 unset($request['image']);
             }
-            $request = array_merge($request, array('user_id' => 1));
+            $request = array_merge($request, array('user_id' => $_SESSION['user']));
             $db->update('articles', $id, array_keys($request), $request);
             $this->redirect('article');
         } else {

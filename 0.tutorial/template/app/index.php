@@ -7,8 +7,8 @@ require_once(realpath(dirname(__FILE__) . "/../app/layouts/head-tag.php"));
             <section class="intro-row intro-h-2-3 mb-10x">
 
                 <section class="intro-2-3-col intro-h-100 position-relative h-md-300px">
-                    <a href="http://localhost/admin-panel/show-article/1">
-                        <section class="intro-2-3-item img-bg intro-h-100" style="background: url(http://localhost/admin-panel) no-repeat center; background-size: cover;"></section>
+                    <a href="http://localhost/PHPTuto/0.tutorial/show-article/1">
+                        <section class="intro-2-3-item img-bg intro-h-100" style="background: url(http://localhost/PHPTuto/0.tutorial) no-repeat center; background-size: cover;"></section>
                         <section class="intro-item-caption">
                             <h3 class="caption-title">
                                 <span>Lorem ipsum dolor sit amet.</span>
@@ -24,8 +24,8 @@ require_once(realpath(dirname(__FILE__) . "/../app/layouts/head-tag.php"));
                 <section class="intro-1-3-col intro-h-100">
 
                     <section class="intro-1-3-item intro-h-50 position-relative h-md-300px">
-                        <a href="http://localhost/admin-panel/show-article/2">
-                            <section class="img-bg intro-h-100" style="background: url(http://localhost/admin-panel) no-repeat center; background-size: cover;"></section>
+                        <a href="http://localhost/PHPTuto/0.tutorial/show-article/2">
+                            <section class="img-bg intro-h-100" style="background: url(http://localhost/PHPTuto/0.tutorial) no-repeat center; background-size: cover;"></section>
                             <section class="intro-item-caption">
                                 <h3 class="caption-title">
                                     <b>Lorem ipsum dolor sit amet, consectetur.</b>
@@ -41,8 +41,8 @@ require_once(realpath(dirname(__FILE__) . "/../app/layouts/head-tag.php"));
                     </section>
 
                     <section class="intro-1-3-item intro-h-50 position-relative h-md-300px">
-                        <a href="http://localhost/admin-panel/show-article/3">
-                            <section class="img-bg intro-h-100" style="background: url(http://localhost/admin-panel) no-repeat center; background-size: cover;"></section>
+                        <a href="http://localhost/PHPTuto/0.tutorial/show-article/3">
+                            <section class="img-bg intro-h-100" style="background: url(http://localhost/PHPTuto/0.tutorial) no-repeat center; background-size: cover;"></section>
                             <section class="intro-item-caption">
                                 <h3 class="caption-title">
                                     <b>Lorem ipsum dolor.</b>
@@ -62,8 +62,8 @@ require_once(realpath(dirname(__FILE__) . "/../app/layouts/head-tag.php"));
 
             <section class="intro-row intro-h-1-3">
                 <section class="intro-1-3-col-item intro-h-100 position-relative h-md-300px">
-                    <a href="http://localhost/admin-panel/show-article/4">
-                        <section class="img-bg intro-h-100" style="background: url(http://localhost/admin-panel) no-repeat center; background-size: cover;"></section>
+                    <a href="http://localhost/PHPTuto/0.tutorial/show-article/4">
+                        <section class="img-bg intro-h-100" style="background: url(http://localhost/PHPTuto/0.tutorial) no-repeat center; background-size: cover;"></section>
                         <section class="intro-item-caption">
                             <h3 class="caption-title">
                                 <b>Lorem ipsum dolor sit amet.</b>
@@ -77,8 +77,8 @@ require_once(realpath(dirname(__FILE__) . "/../app/layouts/head-tag.php"));
                     </a>
                 </section>
                 <section class="intro-1-3-col-item intro-h-100 position-relative h-md-300px">
-                    <a href="http://localhost/admin-panel/show-article/1">
-                        <section class="img-bg intro-h-100" style="background: url(http://localhost/admin-panel) no-repeat center; background-size: cover;"></section>
+                    <a href="http://localhost/PHPTuto/0.tutorial/show-article/1">
+                        <section class="img-bg intro-h-100" style="background: url(http://localhost/PHPTuto/0.tutorial) no-repeat center; background-size: cover;"></section>
                         <section class="intro-item-caption">
                             <h3 class="caption-title">
                                 <b>Lorem ipsum dolor sit.</b>
@@ -93,8 +93,8 @@ require_once(realpath(dirname(__FILE__) . "/../app/layouts/head-tag.php"));
                 </section>
 
                 <section class="intro-1-3-col-item intro-h-100 position-relative h-md-300px">
-                    <a href="http://localhost/admin-panel/show-article/5">
-                        <section class="img-bg intro-h-100" style="background: url(http://localhost/admin-panel) no-repeat center; background-size: cover;"></section>
+                    <a href="http://localhost/PHPTuto/0.tutorial/show-article/5">
+                        <section class="img-bg intro-h-100" style="background: url(http://localhost/PHPTuto/0.tutorial) no-repeat center; background-size: cover;"></section>
                         <section class="intro-item-caption">
                             <h3 class="caption-title">
                                 <b>Lorem ipsum dolor sit amet, consectetur.</b>
@@ -115,23 +115,28 @@ require_once(realpath(dirname(__FILE__) . "/../app/layouts/head-tag.php"));
 
                 <section class="main-crypto-mining-news">
                     <h2 class="title">POPULAR POSTS</h2>
+                    <?PHP
+                    foreach ($popularArticles as $popularArticle) {
 
+                    ?>
                         <section class="main-news-w-50">
                             <article>
-                                <img class="main-news-img" src="http://localhost/admin-panel/1" alt="">
+                                <img class="main-news-img" src="http://localhost/PHPTuto/0.tutorial/<?php echo $popularArticle['image'] ?>" alt="">
                                 <h3 class="article-title">
-                                    <a href="http://localhost/admin-panel/show-article/1">Lorem ipsum dolor sit.</a>
+                                    <a href="http://localhost/PHPTuto/0.tutorial/show-article/<?php echo $popularArticle['id'] ?>"><?php echo $popularArticle['title'] ?></a>
                                 </h3>
                                 <ul class="info-bar">
-                                    <li class=""><span class="text-muted">by</span> <a href="#" class="color-black"><b>Kaman,</b></a>
-                                        <span class="text-muted">feb 19 2019</span></li>
+                                    <li class=""><span class="text-muted">by</span> <a href="#" class="color-black"><b><?php echo $popularArticle['username'] ?></b></a>
+                                        <span class="text-muted"><?php echo date("M d,Y",strtotime($popularArticle['created_at'])) ?></span></li>
                                     <li><i class="fas fa-bolt text-yellow"></i> 54</li>
                                     <li><i class="fas fa-comments text-yellow"></i> 5</li>
                                 </ul>
                             </article>
                         </section>
 
-
+                        <?php
+                    }
+                        ?>
                     <section class="clear-fix"></section>
                 </section><!--end of main crypto mining news-->
             </main><!--end of main-->
