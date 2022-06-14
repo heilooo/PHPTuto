@@ -17,7 +17,7 @@
 <section class="app">
     <header>
         <nav class="header">
-            <img class="header-logo" src="http://localhost/PHPTuto/0.tutorial/public/setting/logo.png" alt="">
+            <img class="header-logo" src="http://localhost/PHPTuto/0.tutorial/<?php if (isset($setting['logo'])) echo $setting['logo'] ?>" alt="">
             <button class="header-menu-burger" onclick="showMenu()" type="button"><i class="fas fa-bars"></i></button>
             <ul class="header-menu" id="menu">
                 <?php foreach ($menus as $menu) { ?>
