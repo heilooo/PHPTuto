@@ -8,7 +8,7 @@ use PDOException;
 class DataBase
 {
     private $connection;
-    private $option = array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION, PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC);
+    private $option = array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION, PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,PDO::MYSQL_ATTR_INIT_COMMAND=>"SET NAMES UTF8");
 
     private $dbHost = "localhost";
     private $dbName = "test";
@@ -77,7 +77,7 @@ class DataBase
             $stm = $this->connection->prepare($sql);
             $affectedrows = $stm->execute(array_merge(array_filter(array_values($values)), [$id]));
             if (isset($affectedrows)) {
-                echo "records are updated";
+//                echo "records are updated";
             }
             return true;
         } catch (\PDOException $e) {

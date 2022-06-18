@@ -6,9 +6,13 @@ class Admin
 {
     public function __construct()
     {
-     $auth= new Auth();
-     $auth->checkAdmin();
+        $auth = new Auth();
+        $auth->checkAdmin();
+        if (session_status() == PHP_SESSION_NONE) {
+            session_start();
+        }
     }
+
     protected function redirect($url)
     {
         $protocol = strpos($_SERVER['SERVER_PROTOCOL'], 'https') === true ? 'https://' : 'http://';

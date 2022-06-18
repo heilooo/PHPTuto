@@ -35,7 +35,7 @@ class Article extends Admin
         if ($request['cat_id'] != null) {
             $request['image'] = $this->saveImages($request['image'], 'article_image');
             if ($request['image']) {
-                $request = array_merge($request, array('user_id' => 1));
+                $request = array_merge($request, array('user_id' => $_SESSION['user']));
                 $db->insert('articles', array_keys($request), $request);
                 $this->redirect('article');
             } else {
@@ -58,15 +58,16 @@ class Article extends Admin
     {
         $db = new DataBase();
         if ($request['cat_id'] != null) {
-            $request['image'] = $this->saveImages($request['image'], 'article_image');
-            if ($request['image']) {
-                $request = array_merge($request, array('user_id' => 1));
-                $db->insert('articles', array_keys($request), $request);
-                $this->redirect('article');
+
+
+            if ($request['image']['tmp_name'] != null) {
+                $article = $db->select('SELECT * FROM `articles` WHERE `id` =? ', [$id])->fetch();
+                $this->removeImage($article['image']);
+                $request['image'] = $this->saveImages($request['image'], 'article_image');
             } else {
                 unset($request['image']);
             }
-            $request = array_merge($request, array('user_id' => 1));
+            $request = array_merge($request, array('user_id' => $_SESSION['user']));
             $db->update('articles', $id, array_keys($request), $request);
             $this->redirect('article');
         } else {
@@ -80,7 +81,7 @@ class Article extends Admin
         $article = $db->select('SELECT * FROM `articles` WHERE `id` =? ', [$id])->fetch();
         $this->removeImage($article['image']);
 
-        $db->delete('articles',$id);
+        $db->delete('articles', $id);
         $this->redirectBack();
     }
 }

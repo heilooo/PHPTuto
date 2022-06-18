@@ -27,8 +27,9 @@ class WebSetting extends Admin
     {
         $db=new DataBase();
         $setting=$db->select("SELECT * FROM `websetting`")->fetch();
-        if ($request['logo']['tmp_name']!=""){
-            $request['logo']=$this->saveImages($request['logo'],'setting','logo');
+        if ($request['logo']['tmp_name']!=NULL){
+            $this->removeImage($setting['image']);
+            $request['logo']=$this->saveImages($request['logo'],'setting');
         }else{
             unset($request['logo']);
         }
