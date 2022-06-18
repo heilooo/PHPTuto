@@ -20,6 +20,9 @@ use AdminDashboard\Auth;
 require_once realpath(dirname(__FILE__).'/admin-dashboard/Home.php');
 use AdminDashboard\Home;
 
+require_once realpath(dirname(__FILE__).'/admin-dashboard/Comment.php');
+use AdminDashboard\Comment  ;
+
 //require_once 'admin-dashboard/CreateDB.php';
 //use DataBase\CreateDB;
 //$db=new CreateDB();
@@ -126,3 +129,7 @@ uri('home','Home','index');
 uri('show-article/{id}','Home','show');
 uri('show-category/{id}','Home','category');
 uri('comment-store','Home','commentStore','POST');
+//comments
+uri('comment','Comment','index');
+uri('comment/show/{id}','Comment','show');
+uri('comment/approved/{id}','Comment','approved');
