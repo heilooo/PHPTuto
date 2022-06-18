@@ -171,7 +171,7 @@ require_once(realpath(dirname(__FILE__) . "/../app/layouts/head-tag.php"));
                                         <span class="text-muted"><?php echo date("M d,Y", strtotime($popularArticle['created_at'])) ?></span>
                                     </li>
                                     <li><i class="fas fa-bolt text-yellow"></i> <?php echo $popularArticle['view'] ?></li>
-                                    <li><i class="fas fa-comments text-yellow"></i> <?php echo $popularArticle['comment_count'] ?></li>
+                                    <li><i class="fas fa-comments text-yellow"></i> <?php echo $popularArticle['comments_count'] ?></li>
                                 </ul>
                             </article>
                         </section>
