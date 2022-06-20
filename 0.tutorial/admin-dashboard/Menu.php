@@ -12,7 +12,7 @@ class Menu extends Admin
     public function index()
     {
         $db = new DataBase();
-        $menus=$db->select("SELECT * FROM `menus` ORDER BY `id` DESC ");
+        $menus = $db->select("SELECT * FROM `menus` ORDER BY `id` DESC ");
         require_once realpath(dirname(__FILE__) . "/../template/admin/menus/index.php");
     }
 
@@ -42,10 +42,10 @@ class Menu extends Admin
         $db = new DataBase();
         $menus = $db->select('SELECT * FROM `menus` WHERE `parent_id` IS NULL')->fetchAll();
         $menu = $db->select("SELECT * FROM `menus` WHERE `id`=?", [$id])->fetch();
-        require_once realpath(dirname(__FILE__).'/../template/admin/menus/edit.php');
+        require_once realpath(dirname(__FILE__) . '/../template/admin/menus/edit.php');
     }
 
-    public function update($id, $request)
+    public function update($request, $id)
     {
         $db = new DataBase();
         $db->update('menus', $id, array_keys($request), $request);
@@ -55,7 +55,7 @@ class Menu extends Admin
     public function delete($id)
     {
         $db = new DataBase();
-        $db->delete('menus',$id);
+        $db->delete('menus', $id);
         $this->redirect('menu');
     }
 }
