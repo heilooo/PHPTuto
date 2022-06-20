@@ -7,7 +7,7 @@ require_once(realpath(dirname(__FILE__) . "/../layouts/head-tag.php"));
 
     <section class="row my-3">
         <section class="col-12">
-            <form method="post" action="http://localhost/PHPTotu/0.tutorial/menu/update/<?php echo $id ?>">
+            <form method="post" action="http://localhost/PHPTuto/0.tutorial/menu/update/<?php echo $id ?>">
 
                 <div class="form-group">
                     <label for="name">Name</label>
