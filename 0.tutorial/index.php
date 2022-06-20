@@ -23,6 +23,9 @@ use AdminDashboard\Home;
 require_once realpath(dirname(__FILE__).'/admin-dashboard/Comment.php');
 use AdminDashboard\Comment  ;
 
+require_once realpath(dirname(__FILE__).'/admin-dashboard/Dashboard.php');
+use AdminDashboard\Dashboard  ;
+
 //require_once 'admin-dashboard/CreateDB.php';
 //use DataBase\CreateDB;
 //$db=new CreateDB();
@@ -82,7 +85,8 @@ function uri($uri,$class,$method,$requestMethod='GET'){
     }
 
 }
-
+//Dashboard
+uri('admin','Dashboard','index');
 //Category
 uri('category','Category','index');
 uri('category/show/{id}','Category','show');

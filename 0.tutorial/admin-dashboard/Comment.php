@@ -25,7 +25,7 @@ class Comment extends Admin
     public function show($id)
     {
         $db = new DataBase();
-        $comments = $db->select("SELECT * FROM `comments`  ORDER BY `id` DESC;");
+        $comment = $db->select("SELECT * FROM `comments` WHERE id=?;",[$id])->fetch();
         require_once realpath(dirname(__FILE__) . '/../template/admin/comments/show.php');
 
     }

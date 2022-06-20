@@ -36,8 +36,8 @@ require_once(realpath(dirname(__FILE__) . "/../layouts/head-tag.php"));
                 <?php
                 if ($comment['status'] == 'seen') {
                     ?>
-                    <a role="button" class="btn btn-sm btn-warning text-white"
-                       href="http://localhost/PHPTuto/0.tutorial/comment/approved/<?php echo $comment['id'] ?>">click toapproved</a>
+                    <a role="button" class="btn btn-sm btn-success text-white"
+                       href="http://localhost/PHPTuto/0.tutorial/comment/approved/<?php echo $comment['id'] ?>">click to approved</a>
                     <?php
                 } else{
                     ?>

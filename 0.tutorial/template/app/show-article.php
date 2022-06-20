@@ -1,7 +1,6 @@
 <?php
 require_once(realpath(dirname(__FILE__) . "/../app/layouts/head-tag.php"));
 ?>
-
 <section class="content">
 
         <section class="container">
@@ -32,7 +31,7 @@ require_once(realpath(dirname(__FILE__) . "/../app/layouts/head-tag.php"));
                         <section class="comment-box">
                             <h3 class="comment-box-header">
                                 <?php echo $comment['username'] ?>
-                                <span class="comment-box-date"><?php echo date("M d,Y", strtotime($comment['created_at'])) ?></span>
+                                <span class="comment-box-date"><?php echo date("M d, Y", strtotime($comment['created_at'])) ?></span>
                             </h3>
                             <comment>
                                 <?php echo $comment['comment'] ?>
@@ -43,7 +42,7 @@ require_once(realpath(dirname(__FILE__) . "/../app/layouts/head-tag.php"));
                     if (isset($_SESSION['user'])){
                         ?>
                     <form action="http://localhost/PHPTuto/0.tutorial/comment-store" method="post">
-                            <input name="article_id" type="hidden" value="<?php echo $_SESSION['user'] ?>">
+                            <input name="article_id" type="hidden" value="<?php echo $id ?>">
                         <textarea class="comment" name="comment" rows="4" required placeholder="your comment ..."></textarea>
                         <input class="submit" type="submit" value="store comment">
                     </form>
